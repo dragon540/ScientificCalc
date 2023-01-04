@@ -9,12 +9,14 @@
 #include <stdlib.h>
 
 #include "basicCalc.h"
+#include "equations.h"
+#include "cl_interface.h"
 
 int main(int argc, char *argv[]) {
-	int x,y;
-	scanf("%d%d",&x, &y);
+	//int x,y,z;
+	//scanf("%d%d%d",&x, &y, &z);
 
-	printf("%lf\n", Ncr(x, y));
+	printCalcBoard();
 	return 0;
 }
 
