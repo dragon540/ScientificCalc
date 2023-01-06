@@ -24,7 +24,7 @@ struct roots twoDegOneVar(double a, double b, double c);
 
 // Two variable linear equation
 struct sol {
-	double x, y
+	double x, y;
 };
 struct sol oneDegTwoVar(double a1, double b1, double c1, double a2, double b2, double c2);
 
