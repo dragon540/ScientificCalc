@@ -13,14 +13,17 @@
 #include "cl_interface.h"
 
 int main(int argc, char *argv[]) {
-	int a,b,c,x,y,z;
-	scanf("%d%d%d%d%d%d",&a, &b, &c, &x, &y, &z);
-
 	printCalcBoard();
-	double sol1 = oneDegTwoVar(a, b, c, x, y, z).x;
-	double sol2 = oneDegTwoVar(a, b, c, x, y, z).y;
 
-	printf("x = %lf and y = %lf\n",sol1, sol2);
+	int a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3;
+
+	scanf("%d%d%d%d%d%d%d%d%d%d%d%d",&a1, &b1, &c1, &d1, &a2, &b2, &c2, &d2, &a3, &b3, &c3, &d3);
+
+	double sol1 = oneDegThreeVar(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3).x;
+	double sol2 = oneDegThreeVar(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3).y;
+	double sol3 = oneDegThreeVar(a1,b1,c1,d1,a2,b2,c2,d2,a3,b3,c3,d3).z;
+
+	printf("x = %lf\ny = %lf\nz = %lf",sol1, sol2, sol3);
 
 	return 0;
 }
