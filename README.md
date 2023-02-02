@@ -6,7 +6,7 @@ This is a small scientifc calculator project, the aim is to create a simple CLI 
 
 1.Equation solver(linear - two variable, three variable; quadratic)
  
-2.Matrix calculation (for example- matrix multiplkication, inverse, etc)
+2.Matrix calculation (for example- matrix multiplication, inverse, etc)
 
 3.Implementation of BigInt library and ultimate migration of all function to use this library
 
