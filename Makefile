@@ -10,8 +10,11 @@ equations.o: equations.c equations.h
 matrix.o: matrix.c matrix.h
 	gcc -c matrix.c
 
-main.o: main.c basicCalc.h cl_interface.h equations.h matrix.h
+imag_num.o: imag_num.c imag_num.h
+	gcc -c imag_num.c
+
+main.o: main.c basicCalc.h cl_interface.h equations.h matrix.h imag_num.h
 	gcc -c main.c
 
-main: main.o basicCalc.o cl_interface.o equations.o matrix.o
-	gcc main.o basicCalc.o cl_interface.o equations.o matrix.o -o main -lm
+main: main.o basicCalc.o cl_interface.o equations.o matrix.o imag_num.o
+	gcc main.o basicCalc.o cl_interface.o equations.o matrix.o imag_num.o -o main -lm

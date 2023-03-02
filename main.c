@@ -9,33 +9,19 @@
 
 #include "cl_interface.h"
 #include "matrix.h"
+#include "imag_num.h"
 
 int main(int argc, char *argv[]) {
 
-	//twoDegOneVar_wrapper();
-	//oneDegTwoVar_wrapper();
-	//oneDegThreeVar_wrapper();
-	/**8int A[100][100];
-	int B[100][100];
+    //matMul_wrapper();
+    struct imag_num A, B;
+    A.real = 3;
+    A.cmplx = -1;
+    B.real = 2;
+    B.cmplx = -2;
 
-	A[0][0] = 1;	A[0][1] = 0;	A[0][2] = 0;
-	A[1][0] = 0;	A[1][1] = 1;	A[1][2] = 0;
-	A[2][0] = 0;	A[2][1] = 0;	A[2][2] = 1;
+    printf("%lf + j%lf\n", imag_div(A, B).real, imag_div(A, B).cmplx);
 
-	B[0][0] = 1;	B[0][1] = 0;	B[0][2] = 0;
-	B[1][0] = 0;	B[1][1] = 1;	B[1][2] = 0;
-	B[2][0] = 0;	B[2][1] = 0;	B[2][2] = 1;
-
-	int **pro = mat_mulp(A, B, 3, 3, 3, 3);
-	for(int i=0;i<3;i++) {
-		for(int j=0;j<3;j++) {
-			printf("%d ", pro[i][j]);
-		}
-		printf("\n");
-	}
-	free(pro);***/
-
-    matMul_wrapper();
 	return 0;
 }
 
