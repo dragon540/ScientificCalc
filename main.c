@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 	//twoDegOneVar_wrapper();
 	//oneDegTwoVar_wrapper();
 	//oneDegThreeVar_wrapper();
-	int A[100][100];
+	/**8int A[100][100];
 	int B[100][100];
 
 	A[0][0] = 1;	A[0][1] = 0;	A[0][2] = 0;
@@ -33,8 +33,9 @@ int main(int argc, char *argv[]) {
 		}
 		printf("\n");
 	}
-	free(pro);
+	free(pro);***/
 
+    matMul_wrapper();
 	return 0;
 }
 

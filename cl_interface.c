@@ -9,10 +9,13 @@
  * This file provides functions which are required to provide command line interface to the user
  * And wrapper function of all functionalities
  */
+#include <stdlib.h>
+#include <stdio.h>
 
 #include "cl_interface.h"
 #include "basicCalc.h"
 #include "equations.h"
+#include "matrix.h"
 
 void printCalcBoard() {
 	/**
@@ -122,5 +125,48 @@ void oneDegThreeVar_wrapper() {					// for 3 variable linear equation
 		printf("x = %lf\ny = %lf\nz = %lf\n", oneDegThreeVar(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3).x, oneDegThreeVar(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3).y, oneDegThreeVar(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3).z);
 }
 
+// wrapper function for matrix files
+void matMul_wrapper() {
+    int A[100][100];
+    int B[100][100];
+
+    printf("Enter size of Row 1: ");
+    int r1;
+    scanf("%d", &r1);
+    printf("Enter size of Column 1: ");
+    int c1;
+    scanf("%d", &c1);
+    printf("Enter size of Row 2: ");
+    int r2;
+    scanf("%d", &r2);
+    printf("Enter size of Column 2: ");
+    int c2;
+    scanf("%d", &c2);
+
+    printf("Matrix A\n");
+    for(int i = 0; i < r1; i++) {
+        printf("Row %d\n", i+1);
+        for(int j = 0; j < c1; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    printf("Matrix B\n");
+    for(int i = 0; i < r2; i++) {
+        printf("Row %d\n", i+1);
+        for(int j = 0; j < c2; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    int **pro = mat_mulp(A, B, r1, c1, r2, c2);
+    for(int i=0;i<r1;i++) {
+        for(int j=0;j<c2;j++) {
+            printf("%d ", pro[i][j]);
+        }
+        printf("\n");
+    }
+    free(pro);
+}
 
 

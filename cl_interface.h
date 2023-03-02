@@ -10,6 +10,7 @@
 
 #include "basicCalc.h"
 #include "equations.h"
+#include "matrix.h"
 
 void printCalcBoard();
 
@@ -27,5 +28,8 @@ void Npr_wrapper();
 void twoDegOneVar_wrapper(); // for quadratic equation
 void oneDegTwoVar_wrapper(); // for 2 variable equation
 void oneDegThreeVar_wrapper(); // for 3 variable linear equation
+
+// wrapper function for matrix file
+void matMul_wrapper();
 
 #endif /* CL_INTERFACE_H_ */
